@@ -2,7 +2,9 @@ from datetime import date
 
 AUTHOR = 'Francisco G. Mezano'
 SITENAME = 'Template de Pelican!!'
-SITEURL = 'https://mezano85.github.io/pelican-template/'
+SITEPATH = 'pelican-template'
+SITEURL = f'https://mezano85.github.io/{SITEPATH}'
+
 
 PATH = 'content'
 
@@ -62,6 +64,6 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 # Menu
 MENUITEMS = (
-    ('Categories', '/' + CATEGORIES_SAVE_AS),
+    ('Categories', f'{SITEPATH}/{CATEGORIES_SAVE_AS}'),
     ('Archive', '/' + ARCHIVES_SAVE_AS),
 )

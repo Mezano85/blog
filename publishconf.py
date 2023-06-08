@@ -1,21 +1,69 @@
-# This file is only used if you use `make publish` or
-# explicitly specify it as your config file.
+from datetime import date
 
-import os
-import sys
-sys.path.append(os.curdir)
-from pelicanconf import *
+AUTHOR = 'Francisco G. Mezano'
+SITENAME = 'Template de Pelican!!'
+SITEPATH = 'pelican-template'
+SITEURL = f'https://mezano85.github.io/{SITEPATH}'
 
-# If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = ''
-RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
+PATH = 'content'
 
-DELETE_OUTPUT_DIRECTORY = True
+TIMEZONE = 'America/Mexico_City'
 
-# Following items are often useful when publishing
+DEFAULT_LANG = 'es'
 
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+# Feed generation is usually not desired when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
+CATEGORIES_SAVE_AS = 'categories.html'
+ARCHIVES_SAVE_AS = 'archives.html'
+
+# Blogroll
+LINKS = (('Pelican', 'https://getpelican.com/'),
+         ('Python.org', 'https://www.python.org/'),
+         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
+         ('You can modify those links in your config file', '#'),)
+
+DEFAULT_PAGINATION = 10
+
+# Uncomment following line if you want document-relative URLs when developing
+#RELATIVE_URLS = True
+
+THEME = 'theme/blue_one'
+
+
+# Theme customizations
+MINIMALXY_CUSTOM_CSS = 'static/custom.css'
+MINIMALXY_FAVICON = 'favicon.ico'
+MINIMALXY_START_YEAR = 2022
+MINIMALXY_CURRENT_YEAR = date.today().year
+
+# Author
+AUTHOR_INTRO = u'Hello world! I’m John Doe.'
+AUTHOR_DESCRIPTION = u'Hello world! I’m John Doe. I like coffee, birds and Python.'
+AUTHOR_AVATAR = 'https://media.licdn.com/dms/image/C4E03AQGCo0TsMjrGKw/profile-displayphoto-shrink_200_200/0/1599577226305?e=1691625600&v=beta&t=6B2UXhqNmuizRMSaDDWxMqRXmQVeDIJZ2fEg9AkVTRE'
+AUTHOR_WEB = 'http://mypersonalsite.com'
+
+# Services
+GOOGLE_ANALYTICS = 'UA-12345678-9'
+#DISQUS_SITENAME = 'johndoe'
+
+# Social
+SOCIAL = (
+    ('facebook', 'http://www.facebook.com/johndoe'),
+    ('twitter', 'http://twitter.com/johndoe'),
+    ('github', 'https://github.com/johndoe'),
+    ('linkedin', 'http://www.linkedin.com/in/mezano'),
+)
+
+DISPLAY_CATEGORIES_ON_MENU = False
+
+# Menu
+MENUITEMS = (
+    ('Categories', f'{SITEPATH}/{CATEGORIES_SAVE_AS}'),
+    ('Archive', '/' + ARCHIVES_SAVE_AS),
+)
