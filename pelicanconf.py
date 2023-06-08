@@ -2,7 +2,7 @@ from datetime import date
 
 AUTHOR = 'Francisco G. Mezano'
 SITENAME = 'Template de Pelican!!'
-SITEURL = ''
+SITEURL = 'https://mezano85.github.io/pelican-template/'
 
 PATH = 'content'
 
