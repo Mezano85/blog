@@ -1,8 +1,8 @@
 from datetime import date
 
 AUTHOR = 'Francisco G. Mezano'
-SITENAME = 'Template de Pelican!!'
-SITEPATH = 'pelican-template'
+SITENAME = 'Blog DataOps!!'
+SITEPATH = 'blog'
 SITEURL = f'https://mezano85.github.io/{SITEPATH}'
 
 
@@ -65,5 +65,5 @@ DISPLAY_CATEGORIES_ON_MENU = False
 # Menu
 MENUITEMS = (
     ('Categories', f'{SITEPATH}/{CATEGORIES_SAVE_AS}'),
-    ('Archive', '/' + ARCHIVES_SAVE_AS),
+    ('Archive', f'{SITEPATH}/{CATEGORIES_SAVE_AS}'),
 )
