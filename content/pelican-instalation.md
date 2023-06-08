@@ -5,6 +5,7 @@ Category: Learning
 Slug: pelican-configuration
 Authors: Francisco G. Mezano
 Summary: Descripción de mi primer instalación de pelican y su configuración.
+Tags: Hola, Mundo, Hey
 
 
 # Proceso de instalación

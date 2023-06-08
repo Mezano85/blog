@@ -5,11 +5,13 @@ Category: Temas
 Slug: pelican-theme
 Authors: Francisco G. Mezano
 Summary: Configurando el tema de pelican.
+Lang: es
+Tags: Hola, Mundo
 
 
 
-# Blue Penguin for pelican
-A simple theme for pelican. Solarized pygments. Feeds support.
+# Blue Penguin para pelican
+Un tema simple Pelican. Con grandes aplicaciones para soporte.
 
 ## Settings
 ```python

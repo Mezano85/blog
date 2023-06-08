@@ -37,16 +37,16 @@ THEME = 'theme/blue_one'
 
 
 # Theme customizations
-MINIMALXY_CUSTOM_CSS = 'static/custom.css'
+#MINIMALXY_CUSTOM_CSS = 'static/custom.css'
 MINIMALXY_FAVICON = 'favicon.ico'
 MINIMALXY_START_YEAR = 2022
 MINIMALXY_CURRENT_YEAR = date.today().year
 
 # Author
-AUTHOR_INTRO = u'Hello world! I’m John Doe.'
-AUTHOR_DESCRIPTION = u'Hello world! I’m John Doe. I like coffee, birds and Python.'
+AUTHOR_INTRO = u'Hola, soy Francisco García Mezano. Data Team Lead en Nowports.'
+AUTHOR_DESCRIPTION = u'Estadístico | Data Scientis | Data Analyst | Data Engineer | Data Team Lead'
 AUTHOR_AVATAR = 'https://media.licdn.com/dms/image/C4E03AQGCo0TsMjrGKw/profile-displayphoto-shrink_200_200/0/1599577226305?e=1691625600&v=beta&t=6B2UXhqNmuizRMSaDDWxMqRXmQVeDIJZ2fEg9AkVTRE'
-AUTHOR_WEB = 'http://mypersonalsite.com'
+AUTHOR_WEB = 'https://mezano85.github.io/'
 
 # Services
 GOOGLE_ANALYTICS = 'UA-12345678-9'
@@ -54,16 +54,16 @@ GOOGLE_ANALYTICS = 'UA-12345678-9'
 
 # Social
 SOCIAL = (
-    ('facebook', 'http://www.facebook.com/johndoe'),
-    ('twitter', 'http://twitter.com/johndoe'),
-    ('github', 'https://github.com/johndoe'),
+   # ('facebook', 'http://www.facebook.com/johndoe'),
+    ('twitter', 'https://twitter.com/FranciscoM76995'),
+    ('github', 'https://github.com/mezano85'),
     ('linkedin', 'http://www.linkedin.com/in/mezano'),
 )
 
-DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = True
 
 # Menu
-MENUITEMS = (
-    ('Categories', f'{CATEGORIES_SAVE_AS}'),
-    ('Archive', f'{ARCHIVES_SAVE_AS}'),
-)
+#MENUITEMS = (
+#    ('Categories', f'{CATEGORIES_SAVE_AS}'),
+#    ('Archive', f'{ARCHIVES_SAVE_AS}'),
+#)
