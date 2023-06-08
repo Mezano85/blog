@@ -11,12 +11,12 @@
         <h1>{{ article.title }}</h1>
         <div class="post-info">
           <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
-            <span><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> in <a href="{{ SITEURL }}/{{ article.category.url }}" title="All articles in category {{ article.category }}">{{ article.category }}</a></span>
+            <span style="font-size:10pt; font-style: italic;"><time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%Y-%m-%d') }}</time> - <a href="{{ SITEURL }}/{{ article.category.url }}" title="All articles in category {{ article.category }}">{{ article.category }}</a></span>
           </div>
           {% if article.tags %}
           <div>
             {% for tag in article.tags %}
-            <span class="w3-tag w3-light-grey w3-text-blue w3-hover-blue">
+            <span class="w3-tag w3-light-grey w3-text-grey w3-hover-blue" style="font-size:10pt; font-style: italic;">
               <a href="{{ SITEURL }}/{{ tag.url }}" title="All articles with {{ tag.name.title() }} tag">#{{ tag }}</a>
             </span>
             {% endfor %}
@@ -58,8 +58,11 @@
 
           <br><br><br>
 
-          <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
+          <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it!</p>
           <div id="share" class="share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ (SITEURL + '/' + article.url)|urlencode }}&amp;t={{ (SITENAME + ': ' + article.title)|urlencode }}" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-linkedin"></i> <span>LinkedIn</span>
+            </a>
             <a href="http://www.facebook.com/sharer.php?u={{ (SITEURL + '/' + article.url)|urlencode }}&amp;t={{ (SITENAME + ': ' + article.title)|urlencode }}" target="_blank" class="w3-btn w3-indigo">
               <i class="fa fa-facebook"></i> <span>Facebook</span>
             </a>
