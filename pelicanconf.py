@@ -64,6 +64,6 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 # Menu
 MENUITEMS = (
-    ('Categories', f'/{CATEGORIES_SAVE_AS}'),
-    ('Archive', f'/{ARCHIVES_SAVE_AS}'),
+    ('Categories', f'{CATEGORIES_SAVE_AS}'),
+    ('Archive', f'{ARCHIVES_SAVE_AS}'),
 )
