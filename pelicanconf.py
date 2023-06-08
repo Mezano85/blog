@@ -2,8 +2,8 @@ from datetime import date
 
 AUTHOR = 'Francisco G. Mezano'
 SITENAME = 'Template de Pelican!!'
-SITEPATH = 'pelican-template'
-SITEURL = f'https://mezano85.github.io/{SITEPATH}'
+SITEPATH = ''
+SITEURL = ''
 
 
 PATH = 'content'
