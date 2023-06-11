@@ -49,7 +49,7 @@ AUTHOR_AVATAR = 'https://media.licdn.com/dms/image/C4E03AQGCo0TsMjrGKw/profile-d
 AUTHOR_WEB = 'https://mezano85.github.io/'
 
 # Services
-GOOGLE_ANALYTICS = 'UA-12345678-9'
+GOOGLE_TAG = 'G-KHB57NQZEG'
 #DISQUS_SITENAME = 'johndoe'
 
 # Social
