@@ -98,6 +98,10 @@
     {% if MINIMALXY_FAVICON %}
     <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/{{ MINIMALXY_FAVICON }}">
     {% endif %}
+    
+    {% if GOOGLE_ANALYTICS %}
+      {% include "ga.html" %}
+    {% endif %}
 
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -143,10 +147,6 @@
         <span>&copy; {{ MINIMALXY_START_YEAR }}{% if MINIMALXY_START_YEAR and MINIMALXY_CURRENT_YEAR %}-{% endif %}{{ MINIMALXY_CURRENT_YEAR }} {{ AUTHOR }} {% if FEED_ALL_ATOM %} | <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a>{% endif %}</span>
       </div>
     </footer>
-
-    {% if GOOGLE_ANALYTICS %}
-      {% include "ga.html" %}
-    {% endif %}
 
     {% if PIWIK_URL and PIWIK_SITE_ID %}
       {% include "piwik.html" %}
