@@ -4,7 +4,7 @@ Modified: 2023-06-10 22:00
 Category: Analytics
 Slug: flujo_dashboard
 Authors: Francisco G. Mezano
-Summary: Mostraremos el flujo adecuado para la elaboración de un dashboard!!
+Summary: Este artículo explica los pasos para crear un dashboard que responda a las necesidades del stakeholder. El primer paso es definir el requerimiento, el segundo es diseñar el dashboard, el tercero es construir el pipeline de datos, el cuarto es construir y diseñar el dashboard y el quinto es productificar el pipeline y el dashboard. También describe los roles del Data Analyst y el Data Engineer en el proceso.
 Lang: es
 Tags: Dashboard, Flujo
 
