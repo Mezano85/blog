@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>¿Cuál es el flujo para la elaboración de un dashboard? &ndash; DataOps Blog</title>
+
+    <!-- Meta -->
+    <meta name="description" content="DataOps Blog &ndash; ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Social -->
+    <meta property="article:author" content="Francisco G. Mezano" />
+    <meta property="article:section" content="Analytics" />
+    <meta property="article:published_time" content="2023-06-10" />
+
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="¿Cuál es el flujo para la elaboración de un dashboard?"/>
+    <meta property="og:description" content="Mostraremos el flujo adecuado para la elaboración de un dashboard!!"/>
+    <meta property="og:site_name" content="DataOps Blog" />
+    <meta property="og:url" content="https://mezano85.github.io/blog/flujo_dashboard.html"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="¿Cuál es el flujo para la elaboración de un dashboard?">
+    <meta name="twitter:description" content="Mostraremos el flujo adecuado para la elaboración de un dashboard!!">
+    <meta name="twitter:url" content="https://mezano85.github.io/blog/flujo_dashboard.html">
+
+    <!-- Feed -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/pygments-highlight-github.css">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://mezano85.github.io/blog/favicon.ico">
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://mezano85.github.io/blog/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+       <!-- <a href="https://mezano85.github.io/blog" id="header-logo" title="Home">FG</a> --> 
+       <a href="https://mezano85.github.io/blog/" id="header-logo" title="Home"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+        <nav id="header-menu">
+          <ul>
+
+            <li><a href="https://mezano85.github.io/blog/pages/about.html">About</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-blue" style="font-weight: bold;"><a href="https://mezano85.github.io/blog/category/analytics.html">Analytics</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+
+
+    <br><br><br>
+
+    <article>
+      <header class="w3-container col-main">
+        <h1>¿Cuál es el flujo para la elaboración de un dashboard?</h1>
+        <div class="post-info">
+          <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+            <span style="font-size:10pt; font-style: italic;"><time datetime="2023-06-10T22:00:00-05:00">2023-06-10</time> - <a href="https://mezano85.github.io/blog/category/analytics.html" title="All articles in category Analytics">Analytics</a></span>
+          </div>
+          <div>
+            <span class="w3-tag w3-light-grey w3-text-grey w3-hover-blue" style="font-size:10pt; font-style: italic;">
+              <a href="https://mezano85.github.io/blog/tag/dashboard.html" title="All articles with Dashboard tag">#Dashboard</a>
+            </span>
+            <span class="w3-tag w3-light-grey w3-text-grey w3-hover-blue" style="font-size:10pt; font-style: italic;">
+              <a href="https://mezano85.github.io/blog/tag/flujo.html" title="All articles with Flujo tag">#Flujo</a>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <br>
+
+
+      <div class="col-main w3-container">
+        <section id="content" style="text-align: justify;">
+          <p>Cuando se trata de analizar datos y comunicar resultados, es importante contar con visualizaciones claras y 
+dashboards que transmitan la información de manera efectiva.</p>
+<p>En este artículo abordaré el cómo es un flujo adecuado para la elaboración de un dashboard. Suele suceder que
+el usuario final imagine un dashboard ideal que incluso podría haber trabajado en Excel y que mantiene
+manualmente, pero cuando llega la hora de producirlo, no alcanzamos el resultado esperado... o, si lo logramos,
+puede ser después de varias idas y vueltas que provocan que el tiempo de producción se alargue.</p>
+<p><img alt="Imgur" src="https://i.imgur.com/0kkY7ey.jpg"></p>
+<p>En el proceso, explicaré quién está involucrado en cada parte del proceso, ya que también suele haber
+confusiones entre los responsables. En este caso, hablaré sobre los roles de dos personas importantes en la
+elaboración de un dashboard: el <strong>Data Analyst</strong> y el <strong>Data Engineer</strong>.</p>
+<p>Antes de iniciar con el flujo, quiero aclarar que si hay una persona responsable de inicio a fin del 
+proceso, no hará todas las actividades, pero es responsable de que el resultado final sea el esperado 
+y de llevar la coordinación con el resto del equipo para lograrlo. El responsable es el Data Analyst.</p>
+<h2>Paso 1: ¿Qué preguntas queremos responder?</h2>
+<p>El primer paso es la definición del requerimiento por parte del stakeholder. En esta etapa, el stakeholder 
+debe expresar claramente <strong>las preguntas o problemas que desea resolver a través del dashboard</strong>. Algunas 
+pautas que pueden ayudar en este proceso son:</p>
+<ul>
+<li>
+<p>Identificar el objetivo principal: El stakeholder debe definir el propósito principal del dashboard, es decir, 
+qué información desea obtener o qué decisiones desea respaldar a través de su uso.</p>
+</li>
+<li>
+<p>Determinar las métricas clave: Es importante que el stakeholder identifique las métricas o indicadores clave que 
+son relevantes para su objetivo. Estas métricas deben ser cuantificables y medibles.</p>
+</li>
+<li>
+<p>Establecer el público objetivo: El stakeholder debe especificar quiénes serán los principales usuarios del dashboard 
+y qué tipo de información necesitan para tomar decisiones informadas.</p>
+</li>
+<li>
+<p>Definir el alcance y la granularidad: El stakeholder debe indicar qué datos deben incluirse en el dashboard y 
+el nivel de detalle necesario. Esto implica determinar si se requiere información a nivel general, por área específica, 
+por periodo de tiempo, entre otros aspectos.</p>
+</li>
+<li>
+<p>Establecer el formato y la estructura: El stakeholder puede proporcionar orientación sobre el diseño general del dashboard, 
+quiero hacer una aclaración importante, solo es una orientación, no implica necesariamente que será el diseño
+adecuado, el experto en las visualizaciones, la disposición de los elementos y la organización de la información
+es el Data Analyst, pero siempre se debe escuchar la opinión del Stakeholder para tener una mejor idea de lo que se requiere. </p>
+</li>
+</ul>
+<p>A esta altura, es probable que el usuario tenga un reporte, generalmente en Excel que es como se comienza 
+con el analisis de información si no tienes un perfil tecnológico. Es importante aclarar que cada herramienta de 
+BI tiene funcionalidades y carencias que generalmente no permitirán llegar al mismo resultado, sin embargo
+siempre se tendrán alternativas visuales que lograrán responder las preguntas incluso en varias ocasiones de
+una mejor manera.</p>
+<p>El diálogo abierto y la colaboración entre el stakeholder y el analista de datos son fundamentales en esta etapa para garantizar 
+que las necesidades y expectativas del stakeholder se comprendan completamente. Una vez que se ha definido 
+claramente el requerimiento del dashboard, se puede avanzar al siguiente paso del proceso.</p>
+<h2>Paso 2: Diseño</h2>
+<p>El Data Analyst inicia con la elaboración de un bosquejo o diseño preliminar. Esto implica tener en cuenta las 
+restricciones y características específicas de la herramienta de visualización utilizada en la empresa, 
+ya que cada herramienta tiene su propia sintaxis, capacidades y limitaciones.</p>
+<p>El Data Analyst se encarga de definir cómo se presentarán los datos en el dashboard, qué tipos de visualizaciones 
+se utilizarán, cómo se organizarán los diferentes elementos y qué interacciones o filtros estarán disponibles 
+para el usuario. Este proceso requiere una comprensión profunda de las necesidades del stakeholder expresadas en 
+el paso anterior y de cómo los datos pueden transmitir la información de manera clara y efectiva.</p>
+<p>Además de diseñar la apariencia visual del dashboard, el Data Analyst también identifica los datos necesarios 
+para su creación. Puede tener experiencia en la extracción, transformación y carga de datos (ETL) de manera básica 
+y utilizar esta habilidad para preparar los datos requeridos. Sin embargo, es importante destacar que la 
+responsabilidad principal de la productificación del flujo de datos recae en el Data Engineer.</p>
+<p>De nuevo, la comunicación con el Stakeholder es importante, ayudará mucho tener una opinion del usuario final
+sobre el diseño preliminar, es posible que salgan un par de ideas que logren una mejor versión.</p>
+<h2>Paso 3: Pipeline de datos</h2>
+<p>Este paso es responsabilidad del Data Engineer, en algunas ocasiones, cuando el dashboard no es complejo
+de elaborar y los datos se tienen ya disponibles para reportar en un datawarehouse podría no ser necesario 
+pero lo integreré acá porque es frecuente necesitarlo.</p>
+<p>En esta etapa, el Data Analyst colabora estrechamente con el Data Engineer para asegurarse de que los datos 
+necesarios estén disponibles en el formato adecuado. El Data Analyst puede comunicar al Data Engineer 
+los requisitos de datos específicos, como las fuentes de datos, la estructura de datos, las transformaciones 
+necesarias y cualquier otro aspecto relevante para la construcción del dashboard.</p>
+<p>El Data Engineer analiza las fuentes de datos disponibles y evalúa su calidad y relevancia para el dashboard. 
+Puede ser necesario trabajar con diferentes sistemas, bases de datos o servicios para obtener los datos necesarios.</p>
+<p>Una vez que se identifican las fuentes de datos, el Data Engineer diseña la estructura y las transformaciones 
+necesarias para preparar los datos. Esto implica la limpieza de datos, la eliminación de duplicados, 
+la normalización de formatos y la realización de cálculos o agregaciones específicas según sea necesario.</p>
+<p>Además, se debe tener en cuenta la escalabilidad y el rendimiento del pipeline de datos. Esto implica optimizar 
+las consultas y los procesos de carga de datos para garantizar tiempos de respuesta rápidos y eficientes, 
+especialmente cuando se manejan grandes volúmenes de datos. Aquí puede implementar técnicas de particionamiento 
+o indexación para mejorar el rendimiento de las consultas.</p>
+<p>Una vez que el Data Engineer termine, el Data analyst tendrá la fuente de datos lista para poner manos a la obra.</p>
+<h2>Paso 4: Construcción</h2>
+<p>Una vez que el Data Engineer ha establecido el pipeline de datos y los datos necesarios están disponibles, 
+el Data Analyst puede proceder a la construcción y diseño del dashboard. </p>
+<p>En esta etapa, se seleccionan los gráficos y visualizaciones adecuados para representar los datos de manera 
+clara y comprensible. Se eligen entre una variedad de opciones, como gráficos de barras, circulares, de líneas, 
+mapas y tablas, dependiendo de la naturaleza de los datos y los objetivos del dashboard.</p>
+<p>Se define la disposición y estructura del dashboard, organizando los componentes visuales de manera coherente 
+y fácil de entender. Se decide la ubicación de los gráficos, las leyendas, los filtros interactivos y cualquier 
+otro elemento necesario para la interacción y exploración de datos.</p>
+<p>Además, el Data Analyst se asegura de que el diseño del dashboard siga buenas prácticas de visualización de datos. 
+Esto implica utilizar colores adecuados, evitar la saturación visual, proporcionar etiquetas claras y legibles, 
+y mantener una jerarquía visual coherente para facilitar la comprensión de la información.</p>
+<p>Es importante destacar que el proceso de construcción y diseño del dashboard debe ser iterativo.
+El Data Analyst debe compartir versiones preliminares del dashboard con el stakeholder y otros usuarios 
+clave para recibir comentarios y realizar ajustes. Esto garantiza que el dashboard final cumpla con las expectativas 
+y los requisitos establecidos inicialmente.</p>
+<h2>Paso 5: Productificación</h2>
+<p>Una vez que el dashboard ha sido elaborado y se ha finalizado su diseño, es el momento de llevar a cabo la
+productificación tanto del dashboard como del pipeline de datos. Existen dos enfoques principales para considerar en esta etapa:</p>
+<ul>
+<li>
+<p>Productificación del Pipeline de Datos antes de la Elaboración del Dashboard (Productificación desde el paso 3):
+En este enfoque, se prioriza la productificación del pipeline de datos antes de iniciar la elaboración del dashboard. 
+Esto implica diseñar y desarrollar un flujo de datos confiable y automatizado que recolecte, transforme y proporcione 
+los datos necesarios para el dashboard. Al productificar el pipeline de datos antes, se garantiza la disponibilidad 
+y la actualización continua de los datos requeridos, lo que permite al Data Analyst trabajar con información en 
+tiempo real durante la creación del dashboard. Esto evita retrasos o ajustes posteriores en el pipeline y agiliza 
+el proceso de elaboración del dashboard. Por contra, si durante la construcción del dasboard se requieren ajustes en el 
+pipeline puede implicar trabajos adicionales.</p>
+</li>
+<li>
+<p>Productificación del Pipeline de Datos después de la Elaboración del Dashboard (Productificación en el paso 5, junto con el dashboard)):
+En este enfoque, se enfoca en completar la elaboración del dashboard antes de productificar el pipeline de datos. 
+Durante la creación del dashboard, pueden surgir cambios o ajustes en los requisitos o en la forma en que se presentan 
+los datos. Una vez que el dashboard ha sido finalizado, se procede a productificar el pipeline de datos, 
+asegurando que el flujo de datos esté completamente alineado con las necesidades específicas del dashboard. 
+Esto implica optimizar y automatizar el flujo de datos para garantizar su confiabilidad y disponibilidad continua.</p>
+</li>
+</ul>
+<p>Es importante destacar que la decisión sobre cuándo productificar el pipeline de datos dependerá de factores como 
+la complejidad de los datos, la posibilidad de cambios durante la creación del dashboard y los recursos disponibles. 
+La comunicación y la colaboración entre el Data Analyst y el Data Engineer son fundamentales para determinar el enfoque 
+más adecuado en cada caso.</p>
+<p>Una vez que tanto el dashboard como el pipeline de datos han sido productificados, hemos llegado al final del proceso. 
+El dashboard estará listo para ser utilizado por los usuarios finales.</p>
+        </section>
+
+        <br><br><br>
+
+        <footer>
+          <div class="adjust-width">
+            <div id="author-block" class="w3-light-grey w3-border">
+              <div id="author-info">
+                <a href="https://mezano85.github.io/"><img style="width: 60px; height: 60px;" src="https://media.licdn.com/dms/image/C4E03AQGCo0TsMjrGKw/profile-displayphoto-shrink_200_200/0/1599577226305?e=1691625600&v=beta&t=6B2UXhqNmuizRMSaDDWxMqRXmQVeDIJZ2fEg9AkVTRE" onerror="this.src='theme/images/avatar.png'" alt="Avatar"></a>
+                <div style="margin-left: 20px; margin-top: 15px;">
+                  <a href="https://mezano85.github.io/"><span id="author-name" class="w3-hover-text-dark-grey">Francisco G. Mezano</span></a>
+                  <p id="author-story">Estadístico | Data Scientist | Data Analyst | Data Engineer | Data Team Lead</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br><br>
+
+          <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it!</p>
+          <div id="share" class="share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//mezano85.github.io/blog/flujo_dashboard.html&amp;t=DataOps%20Blog%3A%20%C2%BFCu%C3%A1l%20es%20el%20flujo%20para%20la%20elaboraci%C3%B3n%20de%20un%20dashboard%3F" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-linkedin"></i> <span>LinkedIn</span>
+            </a>
+            <a href="http://www.facebook.com/sharer.php?u=https%3A//mezano85.github.io/blog/flujo_dashboard.html&amp;t=DataOps%20Blog%3A%20%C2%BFCu%C3%A1l%20es%20el%20flujo%20para%20la%20elaboraci%C3%B3n%20de%20un%20dashboard%3F" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="http://twitter.com/share?url=https%3A//mezano85.github.io/blog/flujo_dashboard.html&amp;text=DataOps%20Blog%3A%20%C2%BFCu%C3%A1l%20es%20el%20flujo%20para%20la%20elaboraci%C3%B3n%20de%20un%20dashboard%3F" target="_blank" class="w3-btn w3-blue">
+              <i class="fa fa-twitter"></i> <span>Twitter</span>
+            </a>
+            <a href="https://plus.google.com/share?url=https%3A//mezano85.github.io/blog/flujo_dashboard.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+              <i class="fa fa-google-plus"></i> <span>Google</span>
+            </a>
+          </div>
+
+          <br><br><br>
+
+
+
+        </footer>
+      </div>
+    </article>
+
+
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>&copy; 2022-2023 Francisco G. Mezano </span>
+      </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-12345678-9', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>
