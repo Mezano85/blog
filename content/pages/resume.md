@@ -1,9 +1,9 @@
-Title: Resume
+Title: About
 Date: 2023-06-08 23:31
 Modified: 2023-06-08 23:31
-Slug: resume
+Slug: about
 Authors: Francisco G. Mezano
-Summary: Descripción de mi primer instalación de pelican y su configuración.
+Summary: Acerca de este blog
 
 
 # Proceso de instalación

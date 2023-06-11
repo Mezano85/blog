@@ -22,12 +22,6 @@ AUTHOR_FEED_RSS = None
 CATEGORIES_SAVE_AS = 'categories.html'
 ARCHIVES_SAVE_AS = 'archives.html'
 
-# Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
-
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -44,7 +38,7 @@ MINIMALXY_CURRENT_YEAR = date.today().year
 
 # Author
 AUTHOR_INTRO = u'Hola, soy Francisco García Mezano. Data Team Lead en Nowports.'
-AUTHOR_DESCRIPTION = u'Estadístico | Data Scientis | Data Analyst | Data Engineer | Data Team Lead'
+AUTHOR_DESCRIPTION = u'Estadístico | Data Scientist | Data Analyst | Data Engineer | Data Team Lead'
 AUTHOR_AVATAR = 'https://media.licdn.com/dms/image/C4E03AQGCo0TsMjrGKw/profile-displayphoto-shrink_200_200/0/1599577226305?e=1691625600&v=beta&t=6B2UXhqNmuizRMSaDDWxMqRXmQVeDIJZ2fEg9AkVTRE'
 AUTHOR_WEB = 'https://mezano85.github.io/'
 
