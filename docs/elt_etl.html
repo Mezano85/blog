@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Procesamiento de datos - ELT &ndash; DataOps Blog</title>
+
+    <!-- Meta -->
+    <meta name="description" content="DataOps Blog &ndash; ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Social -->
+    <meta property="article:author" content="Francisco G. Mezano" />
+    <meta property="article:section" content="Data Engineering" />
+    <meta property="article:published_time" content="2023-07-18" />
+
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Procesamiento de datos - ELT"/>
+    <meta property="og:description" content="El ELT surgió como una alternativa al ETL, que era el método tradicional de integración de datos. El ETL consiste en extraer, transformar y cargar los datos en un sistema de destino, como un almacén de datos. El ELT consiste en extraer, cargar y transformar los datos, es decir, se invierte el orden de los dos últimos pasos."/>
+    <meta property="og:site_name" content="DataOps Blog" />
+    <meta property="og:url" content="https://mezano85.github.io/blog/elt_etl.html"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Procesamiento de datos - ELT">
+    <meta name="twitter:description" content="El ELT surgió como una alternativa al ETL, que era el método tradicional de integración de datos. El ETL consiste en extraer, transformar y cargar los datos en un sistema de destino, como un almacén de datos. El ELT consiste en extraer, cargar y transformar los datos, es decir, se invierte el orden de los dos últimos pasos.">
+    <meta name="twitter:url" content="https://mezano85.github.io/blog/elt_etl.html">
+
+    <!-- Feed -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/pygments-highlight-github.css">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://mezano85.github.io/blog/favicon.ico">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHB57NQZEG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KHB57NQZEG');
+    </script>
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://mezano85.github.io/blog/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+       <!-- <a href="https://mezano85.github.io/blog" id="header-logo" title="Home">FG</a> --> 
+       <a href="https://mezano85.github.io/blog/" id="header-logo" title="Home"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+        <nav id="header-menu">
+          <ul>
+
+            <li><a href="https://mezano85.github.io/blog/pages/about.html">Acerca de</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-blue" ><a href="https://mezano85.github.io/blog/category/analytics.html">Analytics</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-blue" style="font-weight: bold;"><a href="https://mezano85.github.io/blog/category/data-engineering.html">Data Engineering</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+
+
+    <br><br><br>
+
+    <article>
+      <header class="w3-container col-main">
+        <h1>Procesamiento de datos - ELT</h1>
+        <div class="post-info">
+          <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+            <span style="font-size:10pt; font-style: italic;"><time datetime="2023-07-18T22:00:00-05:00">2023-07-18</time> - <a href="https://mezano85.github.io/blog/category/data-engineering.html" title="All articles in category Data Engineering">Data Engineering</a></span>
+          </div>
+          <div>
+            <span class="w3-tag w3-light-grey w3-text-grey w3-hover-blue" style="font-size:10pt; font-style: italic;">
+              <a href="https://mezano85.github.io/blog/tag/dataops-etl-elt.html" title="All articles with Dataops Etl Elt tag">#DataOps ETL ELT</a>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <br>
+
+
+      <div class="col-main w3-container">
+        <section id="content" style="text-align: justify;">
+          <p>El correcto manejo de los datos es fundamental para obtener información valiosa que impulse la toma de decisiones 
+y proporcione una ventaja competitiva. En este contexto, los enfoques ETL (Extracción, Transformación y Carga) y 
+ELT (Extracción, Carga y Transformación) desempeñan un papel crucial en el procesamiento y la preparación de los datos 
+para su análisis.</p>
+<p>Anteriormente escribí sobre el <a href="flujo_etl.html">flujo de desarrollo de una ETL</a>, ahora nos enfocaremos un poco en las ELT que se parecen mucho,
+de hecho, las siglas tienen el mismo significado solo que en un orden distinto y casos de uso tambien distintos.</p>
+<p><img alt="Imgur" src="https://i.imgur.com/rY6kLEb.png"></p>
+<p>El procesamiento de datos se ha convertido en un pilar fundamental para el éxito de las organizaciones. Con la creciente 
+cantidad de datos generados cada día, es esencial contar con un enfoque efectivo y ágil para transformar esta vasta cantidad 
+de información en conocimientos valiosos y significativos.</p>
+<h2>El orden de las siglas altera el proceso</h2>
+<p>El ELT surgió como una alternativa al ETL, que era el método tradicional de integración de datos. El ETL consiste en extraer, 
+transformar y cargar los datos en un sistema de destino, como un data warehouse. El ELT consiste en extraer, cargar y transformar 
+los datos, es decir, se invierte el orden de los dos últimos pasos.</p>
+<p>El enfoque de ELT surgió como una respuesta a los desafíos y limitaciones que enfrentaban las organizaciones en el procesamiento 
+de grandes volúmenes de datos. A medida que el volumen y la variedad de datos aumentaban exponencialmente, las soluciones 
+tradicionales de ETL comenzaron a mostrar ciertas limitaciones.</p>
+<p>El surgimiento de tecnologías de almacenamiento y procesamiento masivo, como los data lakes y la computación en la nube, 
+brindó nuevas oportunidades para manejar grandes volúmenes de datos de manera más eficiente. Esto llevó a un cambio de paradigma 
+en el procesamiento de datos, donde la extracción y carga inicial de datos se realizaba directamente en el almacenamiento, 
+seguida de la transformación de los datos en un paso posterior.</p>
+<h2>Comparativa</h2>
+<p>Aunque el ELT no reemplaza a ETL, sino que los complementa según el tipo y la cantidad de datos que se quieren integrar. Hagamos una comparativa:</p>
+<table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+  <tr style="background-color: #f2f2f2;">
+    <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Concepto</th>
+    <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">ETL</th>
+    <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">ELT</th>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Etapas</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Extracción, transformación y carga</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Extracción, carga y transformación</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Ventajas</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Mayor control y calidad de los datos, menor dependencia del sistema de destino, mayor compatibilidad con las herramientas de BI</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Mayor flexibilidad y escalabilidad de los datos, menor tiempo y recursos para el proceso, mayor aprovechamiento de la potencia del sistema de destino</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Desventajas</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Mayor tiempo y recursos para el proceso, menor flexibilidad y escalabilidad de los datos, posible pérdida de información al transformar los datos</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Menor control y calidad de los datos, mayor dependencia del sistema de destino, posible deterioro del rendimiento al transformar los datos</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Flexibilidad</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Menor, ya que se requiere definir el esquema y las reglas de transformación antes de cargar los datos</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Mayor, ya que se puede acceder y transformar los datos según la demanda</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Casos de uso</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Datos estructurados y pequeños, almacenes de datos tradicionales, análisis e informes predefinidos</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Datos no estructurados y grandes, almacenes de datos en la nube, análisis e informes ad hoc</td>
+  </tr>
+</table>
+
+<h2>¿Cómo que se complementan?</h2>
+<p>Veamos un caso de uso en el que todo Data Engineer está interesado, un DataLake (Tambien aplicable al DataLakehouse).</p>
+<p>Un datalake es un repositorio que almacena datos en su forma original, sin transformar ni estructurar. La capa bronce es 
+la capa de entrada, donde se cargan los datos sin procesar desde las fuentes. La capa plata es la capa de procesamiento, 
+donde se limpian, validan y enriquecen los datos para mejorar su calidad. La capa oro es la capa de salida, donde se 
+transforman y modelan los datos para fines específicos de análisis o inteligencia de negocios.</p>
+<p><img alt="Imgur" src="https://i.imgur.com/CeGGLWO.jpg"></p>
+<p>El ELT esta situación, se refiere al proceso de extraer y cargar los datos en la capa bronce, sin aplicar ninguna 
+transformación previa. La T se refiere al proceso de transformar los datos en las capas plata y oro, según las necesidades 
+de cada caso. Estas transformaciones pueden implicar procesos de ETL, como filtrar, normalizar, agregar, combinar o enriquecer los datos.</p>
+        </section>
+
+        <br><br><br>
+
+        <footer>
+          <div class="adjust-width">
+            <div id="author-block" class="w3-light-grey w3-border">
+              <div id="author-info">
+                <a href="https://mezano85.github.io/"><img style="width: 60px; height: 60px;" src="https://media.licdn.com/dms/image/C4E03AQGCo0TsMjrGKw/profile-displayphoto-shrink_200_200/0/1599577226305?e=1691625600&v=beta&t=6B2UXhqNmuizRMSaDDWxMqRXmQVeDIJZ2fEg9AkVTRE" onerror="this.src='theme/images/avatar.png'" alt="Avatar"></a>
+                <div style="margin-left: 20px; margin-top: 15px;">
+                  <a href="https://mezano85.github.io/"><span id="author-name" class="w3-hover-text-dark-grey">Francisco G. Mezano</span></a>
+                  <p id="author-story">Estadístico | Data Scientist | Data Analyst | Data Engineer | Data Team Lead</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br><br>
+
+          <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it!</p>
+          <div id="share" class="share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//mezano85.github.io/blog/elt_etl.html&amp;t=DataOps%20Blog%3A%20Procesamiento%20de%20datos%20-%20ELT" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-linkedin"></i> <span>LinkedIn</span>
+            </a>
+            <a href="http://www.facebook.com/sharer.php?u=https%3A//mezano85.github.io/blog/elt_etl.html&amp;t=DataOps%20Blog%3A%20Procesamiento%20de%20datos%20-%20ELT" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="http://twitter.com/share?url=https%3A//mezano85.github.io/blog/elt_etl.html&amp;text=DataOps%20Blog%3A%20Procesamiento%20de%20datos%20-%20ELT" target="_blank" class="w3-btn w3-blue">
+              <i class="fa fa-twitter"></i> <span>Twitter</span>
+            </a>
+            <a href="https://plus.google.com/share?url=https%3A//mezano85.github.io/blog/elt_etl.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+              <i class="fa fa-google-plus"></i> <span>Google</span>
+            </a>
+          </div>
+
+          <br><br><br>
+
+
+
+        </footer>
+      </div>
+    </article>
+
+
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>&copy; 2022-2023 Francisco G. Mezano </span>
+      </div>
+    </footer>
+
+
+  </body>
+</html>
