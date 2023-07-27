@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>¿Qué grafica utilizar? &ndash; DataOps Blog</title>
+
+    <!-- Meta -->
+    <meta name="description" content="DataOps Blog &ndash; ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Social -->
+    <meta property="article:author" content="Francisco G. Mezano" />
+    <meta property="article:section" content="Analytics" />
+    <meta property="article:published_time" content="2023-07-26" />
+
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="¿Qué grafica utilizar?"/>
+    <meta property="og:description" content="¡Descubre cómo potenciar tus dashboards con gráficos efectivos! En este artículo, exploramos los diferentes tipos de gráficos que se pueden utilizar en un dashboard según la información con la que contamos."/>
+    <meta property="og:site_name" content="DataOps Blog" />
+    <meta property="og:url" content="https://mezano85.github.io/blog/charts.html"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="¿Qué grafica utilizar?">
+    <meta name="twitter:description" content="¡Descubre cómo potenciar tus dashboards con gráficos efectivos! En este artículo, exploramos los diferentes tipos de gráficos que se pueden utilizar en un dashboard según la información con la que contamos.">
+    <meta name="twitter:url" content="https://mezano85.github.io/blog/charts.html">
+
+    <!-- Feed -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mezano85.github.io/blog/theme/css/pygments-highlight-github.css">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://mezano85.github.io/blog/favicon.ico">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHB57NQZEG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KHB57NQZEG');
+    </script>
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://mezano85.github.io/blog/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+       <!-- <a href="https://mezano85.github.io/blog" id="header-logo" title="Home">FG</a> --> 
+       <a href="https://mezano85.github.io/blog/" id="header-logo" title="Home"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+        <nav id="header-menu">
+          <ul>
+
+            <li><a href="https://mezano85.github.io/blog/pages/about.html">Acerca de</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-blue" style="font-weight: bold;"><a href="https://mezano85.github.io/blog/category/analytics.html">Analytics</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-blue" ><a href="https://mezano85.github.io/blog/category/data-engineering.html">Data Engineering</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+
+
+    <br><br><br>
+
+    <article>
+      <header class="w3-container col-main">
+        <h1>¿Qué grafica utilizar?</h1>
+        <div class="post-info">
+          <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+            <span style="font-size:10pt; font-style: italic;"><time datetime="2023-07-26T22:00:00-05:00">2023-07-26</time> - <a href="https://mezano85.github.io/blog/category/analytics.html" title="All articles in category Analytics">Analytics</a></span>
+          </div>
+          <div>
+            <span class="w3-tag w3-light-grey w3-text-grey w3-hover-blue" style="font-size:10pt; font-style: italic;">
+              <a href="https://mezano85.github.io/blog/tag/dahsboard-charts.html" title="All articles with Dahsboard Charts tag">#Dahsboard Charts</a>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <br>
+
+
+      <div class="col-main w3-container">
+        <section id="content" style="text-align: justify;">
+          <p>En el mundo del análisis de datos, la presentación visual de la información es muy importante para 
+entender patrones, tendencias y obtener insights relevantes. Los dashboards son una herramienta para 
+transmitir datos de manera efectiva y accesible a los usuarios. Un dashboard bien diseñado puede 
+facilitar la comprensión de datos complejos y mejorar la toma de decisiones informadas en cualquier 
+organización.</p>
+<p><img alt="Imgur" src="https://i.imgur.com/W0DHvK0.jpg"></p>
+<p>Un aspecto fundamental para lograr un dashboard efectivo es la selección adecuada de los tipos de gráficos 
+que se utilizarán para representar los datos. Cada tipo de gráfico tiene sus propias características 
+y ventajas, y no todos son igualmente adecuados para mostrar todos los tipos de información. Es por 
+eso que es importante comprender qué tipo de gráfico es más adecuado para el tipo de datos con el que 
+se trabaja.</p>
+<p>En esta guía, describiré los diferentes tipos de gráficos que se pueden utilizar en un dashboard y 
+cómo seleccionar el más apropiado según la naturaleza de los datos que deseamos visualizar. 
+Desde gráficos de barras y líneas hasta gráficos circulares y de dispersión, descubriremos cómo 
+cada uno de ellos puede ofrecer perspectivas únicas sobre nuestros datos.</p>
+<h2>Tipos de Gráficos</h2>
+<p>A continuación, menciono algunos de los tipos de gráficos más utilizados y sus principales usos:</p>
+<h3>Gráficos de barras:</h3>
+<p>Este tipo de gráfico es ideal para <strong>comparar diferentes categorías o grupos</strong>. 
+Los gráficos de barras muestran barras rectangulares de longitud proporcional a los valores que representan. 
+Son efectivos para mostrar datos categóricos o discretos, y permiten una fácil interpretación de 
+las diferencias entre categorías.</p>
+<h3>Gráficos de líneas:</h3>
+<p>Los gráficos de líneas son útiles para representar tendencias y cambios en 
+los <strong>datos a lo largo del tiempo</strong>. Son especialmente efectivos para mostrar datos continuos y 
+resaltar patrones o fluctuaciones en series de tiempo.</p>
+<h3>Gráficos circulares o de pastel:</h3>
+<p>Aunque controvertidos en algunos círculos de análisis de datos, los gráficos circulares pueden 
+ser útiles para mostrar la <strong>distribución proporcional de categorías en un todo</strong>. Sin embargo, es importante usarlos 
+con precaución y solo cuando se quiere resaltar una parte en relación con el todo.</p>
+<h3>Gráficos de dispersión:</h3>
+<p>Estos gráficos son útiles para <strong>mostrar la relación entre dos variables numéricas</strong>. Cada punto en el 
+gráfico representa una observación y su posición en el eje x e y está determinada por los valores de las 
+dos variables. Son excelentes para identificar patrones de correlación o agrupación de datos.</p>
+<h3>Gráficos de área:</h3>
+<p>Los gráficos de área son similares a los gráficos de líneas, pero con el área debajo de la línea rellenada 
+en color. Son útiles para mostrar <strong>tendencias y cambios en datos a lo largo del tiempo</strong>, pero también permiten 
+resaltar la magnitud de los valores en una dimensión adicional.</p>
+<h3>Gráficos de barras apiladas:</h3>
+<p>Estos gráficos son una variante de los gráficos de barras que muestran la distribución de una 
+categoría en diferentes segmentos y su evolución a lo largo del tiempo. Son útiles 
+para <strong>comparar la contribución relativa de diferentes elementos dentro de una categoría</strong>.</p>
+<h3>Gráficos de burbujas:</h3>
+<p>Los gráficos de burbujas son una combinación de gráficos de dispersión y gráficos de área. Permiten representar 
+tres variables: dos en los ejes x e y, y una tercera a través del tamaño de las burbujas. 
+Son útiles para <strong>resaltar patrones en datos multidimensionales</strong>.</p>
+<h3>Heatmaps:</h3>
+<p>Los heatmaps son mapas de calor que utilizan colores para representar valores numéricos en una matriz. S
+on efectivos para <strong>mostrar la densidad y distribución de datos en un contexto bidimensional</strong>.</p>
+<h3>Gráficos de treemap:</h3>
+<p>Los gráficos de treemap son una forma de <strong>visualizar datos jerárquicos</strong> a través de rectángulos 
+anidados que representan las diferentes categorías y su proporción dentro del conjunto de datos.</p>
+<h3>Gráficos de radar:</h3>
+<p>Los gráficos de radar son útiles para mostrar múltiples variables en un solo gráfico. Cada 
+variable se representa como un eje y las coordenadas se conectan para formar un polígono que 
+destaca las relaciones y similitudes entre los datos.</p>
+<p>La selección del tipo de gráfico adecuado dependerá del tipo de datos que se desee visualizar y del objetivo de la visualización. 
+Considera qué tipo de gráfico permitirá presentar la información de manera más clara, concisa y atractiva, para que el dashboard 
+sea verdaderamente efectivo en la comunicación de los datos y en la toma de decisiones informadas.</p>
+<h2>Consideraciones de estilo y diseño</h2>
+<p>Una vez que hemos identificado los tipos de gráficos más adecuados para representar nuestra información en el dashboard, 
+necesitamos tener en cuenta las consideraciones de estilo y diseño para crear una visualización atractiva y efectiva. 
+Un dashboard bien diseñado puede marcar la diferencia entre una presentación abrumadora y confusa y una que brinde una experiencia 
+de usuario intuitiva y clara. A continuación, se presentan algunas consideraciones para el estilo y diseño del dashboard:</p>
+<p><strong>Consistencia visual:</strong> Es importante mantener una apariencia coherente en todo el dashboard. Utilizar una paleta 
+de colores consistente y alinear los elementos gráficos ayuda a que la visualización sea más agradable a la vista y fácil de entender.</p>
+<p><strong>Simplicidad:</strong> Menos es más en el diseño de un dashboard. Evitar el exceso de información y elementos innecesarios 
+que puedan distraer al usuario. Optar por una presentación limpia y simple, donde cada gráfico y dato tenga un propósito claro.</p>
+<p><strong>Uso adecuado de colores:</strong> Los colores pueden ser una herramienta poderosa para resaltar información importante, 
+pero también pueden confundir si se usan en exceso. Es importante utilizar colores de manera efectiva y asegurarse 
+de que sean accesibles para todos los usuarios, incluyendo aquellos con dificultades visuales.</p>
+<p><strong>Tamaño y ubicación de los gráficos:</strong> Colocar los gráficos más importantes en lugares destacados y asegurarse de que tengan 
+un tamaño adecuado para que la información sea claramente visible. También es importante evitar la sobrecarga de información 
+al colocar demasiados gráficos en un mismo espacio.</p>
+<p><strong>Interactividad:</strong> Aprovechar las capacidades interactivas del dashboard para permitir a los usuarios explorar 
+los datos de manera más profunda. Los filtros, desgloses y opciones de zoom pueden mejorar la experiencia del usuario 
+y permitir un análisis más detallado.</p>
+<p><strong>Narrativa visual:</strong> Un dashboard bien diseñado cuenta una historia a través de la visualización de datos. Utilizar títulos claros, 
+leyendas y anotaciones para guiar al usuario y explicar los puntos clave de la información presentada.</p>
+<p><strong>Responsividad:</strong> El dashboard debe ser diseñado para ser accesible en diferentes dispositivos y tamaños de pantalla. 
+Asegurarse de que el diseño se ajuste de manera adecuada en computadoras de escritorio, tablets y dispositivos móviles.</p>
+<p><strong>Pruebas y retroalimentación:</strong> Antes de implementar el dashboard final, realizar pruebas con diferentes usuarios 
+para obtener retroalimentación sobre la experiencia de uso. Las opiniones de los usuarios pueden ayudar a identificar posibles mejoras en el diseño y la funcionalidad.</p>
+<p>Al seguir estas consideraciones de estilo y diseño, se puede crear un dashboard atractivo, claro y efectivo que facilite 
+la interpretación y el análisis de los datos. Un diseño bien pensado ayudará a los usuarios a aprovechar todo el potencial de la información presentada.</p>
+<h2>Inspiración</h2>
+<p>A continuación comparto algunas ligas de interes que pueden servir como inspiración para crear dashboards efectivos:</p>
+<ul>
+<li><a href="https://public.tableau.com/app/discover/viz-of-the-day">Tableau: Vizualización del Día</a> es una sección que destaca dashboards con buenos diseños y publicos.</li>
+<li><a href="https://community.fabric.microsoft.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery">Power BI: Data Stories Galery</a> ejemplos de dashboards elaborados con Power BI.</li>
+<li><a href="https://community.qlik.com/t5/Qlik-Gallery/bg-p/qlik-gallery">Qlik Gallery</a> la comunidad de Qlik no podía quedarse atras.</li>
+<li><a href="https://aws.amazon.com/es/quicksight/gallery/">AWS Quicksight</a> Amazon viene de atras pero con pasos agigantados con Quicksight.</li>
+<li><a href="https://lookerstudio.google.com/gallery">Google Looker Studio</a> Google también está en la carrera.</li>
+</ul>
+<p>Tambien exiten algunas herramientas open source en las que podemos crear nuestros dashboards:</p>
+<ul>
+<li><a href="https://www.metabase.com/dashboards/">Metabase</a>.</li>
+<li><a href="https://plotly.com/examples/">Plotly Dash</a>.</li>
+<li><a href="https://pentaho-dashboards.hitachivantara.com/pentaho/mantle/home/content/getting_started_launch.html?selectedTab=tab2&amp;selectedContentIndex=0">Pentaho</a>.</li>
+</ul>
+<p>En última instancia, el objetivo de cualquier dashboard es presentar datos de manera clara y concisa para extraer conocimientos valiosos 
+y tomar acciones basadas en evidencia. Mediante la exploración de ejemplos de dashboards y aprovechando las mejores prácticas de visualización 
+de datos, podemos potenciar nuestro análisis y dar vida a la información, convirtiendo los datos en una poderosa herramienta para impulsar 
+el éxito en cualquier empresa o proyecto. Así que no dudes en explorar, experimentar y mejorar tus habilidades de creación de dashboards para 
+elevar tu capacidad de análisis y comunicación de datos. ¡El mundo de las posibilidades de análisis visual está a tu alcance!</p>
+        </section>
+
+        <br><br><br>
+
+        <footer>
+          <div class="adjust-width">
+            <div id="author-block" class="w3-light-grey w3-border">
+              <div id="author-info">
+                <a href="https://mezano85.github.io/"><img style="width: 60px; height: 60px;" src="https://media.licdn.com/dms/image/C4E03AQGCo0TsMjrGKw/profile-displayphoto-shrink_200_200/0/1599577226305?e=1691625600&v=beta&t=6B2UXhqNmuizRMSaDDWxMqRXmQVeDIJZ2fEg9AkVTRE" onerror="this.src='theme/images/avatar.png'" alt="Avatar"></a>
+                <div style="margin-left: 20px; margin-top: 15px;">
+                  <a href="https://mezano85.github.io/"><span id="author-name" class="w3-hover-text-dark-grey">Francisco G. Mezano</span></a>
+                  <p id="author-story">Estadístico | Data Scientist | Data Analyst | Data Engineer | Data Team Lead</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br><br>
+
+          <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it!</p>
+          <div id="share" class="share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//mezano85.github.io/blog/charts.html&amp;t=DataOps%20Blog%3A%20%C2%BFQu%C3%A9%20grafica%20utilizar%3F" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-linkedin"></i> <span>LinkedIn</span>
+            </a>
+            <a href="http://www.facebook.com/sharer.php?u=https%3A//mezano85.github.io/blog/charts.html&amp;t=DataOps%20Blog%3A%20%C2%BFQu%C3%A9%20grafica%20utilizar%3F" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="http://twitter.com/share?url=https%3A//mezano85.github.io/blog/charts.html&amp;text=DataOps%20Blog%3A%20%C2%BFQu%C3%A9%20grafica%20utilizar%3F" target="_blank" class="w3-btn w3-blue">
+              <i class="fa fa-twitter"></i> <span>Twitter</span>
+            </a>
+            <a href="https://plus.google.com/share?url=https%3A//mezano85.github.io/blog/charts.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+              <i class="fa fa-google-plus"></i> <span>Google</span>
+            </a>
+          </div>
+
+          <br><br><br>
+
+
+
+        </footer>
+      </div>
+    </article>
+
+
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>&copy; 2022-2023 Francisco G. Mezano </span>
+      </div>
+    </footer>
+
+
+  </body>
+</html>
