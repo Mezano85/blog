@@ -55,7 +55,7 @@ GOOGLE_TAG = 'G-KHB57NQZEG'
 # Social
 SOCIAL = (
    # ('facebook', 'http://www.facebook.com/johndoe'),
-    ('twitter', 'https://twitter.com/FranciscoM76995'),
+    ('x-twitter', 'https://twitter.com/FranciscoM76995'),
     ('github', 'https://github.com/mezano85'),
     ('linkedin', 'http://www.linkedin.com/in/mezano'),
 )
