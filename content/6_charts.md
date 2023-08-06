@@ -1,4 +1,4 @@
-Title: ¿Qué grafica utilizar?
+Title: ¿Qué gráfico utilizar?
 Date: 2023-07-26 22:00
 Modified: 2023-07-26 22:00
 Category: Analytics
