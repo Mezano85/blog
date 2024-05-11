@@ -28,7 +28,7 @@ LINKS = (('Pelican', 'https://getpelican.com/'),
          ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
          ('You can modify those links in your config file', '#'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -43,7 +43,7 @@ MINIMALXY_START_YEAR = 2022
 MINIMALXY_CURRENT_YEAR = date.today().year
 
 # Author
-AUTHOR_INTRO = u'Hola, soy Francisco García Mezano. DataOps Manager en Nowports.'
+AUTHOR_INTRO = u'Soy Francisco G. Mezano, un visionario en el campo de los datos con una pasión por impulsar el valor empresarial a través de la innovación data-driven. Mi experiencia en data engineering, DataOps y data science me ha permitido liderar equipos y proyectos que transforman la manera en que las organizaciones aprovechan sus datos para la toma de decisiones estratégicas.   '
 AUTHOR_DESCRIPTION = u'Estadístico | Data Scientis | Data Analyst | Data Engineer | Data Team Lead | DataOps Manager'
 AUTHOR_AVATAR = 'https://mezano85.github.io/assets/img/profile-img.jpg'
 AUTHOR_WEB = 'https://mezano85.github.io/'
@@ -60,10 +60,10 @@ SOCIAL = (
     ('linkedin', 'http://www.linkedin.com/in/mezano'),
 )
 
-DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = False
 
 # Menu
-#MENUITEMS = (
-#    ('Categories', f'{CATEGORIES_SAVE_AS}'),
-#    ('Archive', f'{ARCHIVES_SAVE_AS}'),
-#)
+MENUITEMS = (
+    ('Posts', f'{CATEGORIES_SAVE_AS}'),
+    #('Archive', f'{ARCHIVES_SAVE_AS}'),
+)
