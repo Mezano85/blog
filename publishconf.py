@@ -1,9 +1,9 @@
 from datetime import date
 
 AUTHOR = 'Francisco G. Mezano'
-SITENAME = 'DataOps Blog'
+SITENAME = 'El Hogar del Buho - Blog'
 SITEPATH = 'blog'
-SITEURL = f'https://mezano85.github.io/{SITEPATH}'
+SITEURL = f'https://elhogardelbuho.com/{SITEPATH}'
 
 
 PATH = 'content'
@@ -37,7 +37,7 @@ MINIMALXY_START_YEAR = 2022
 MINIMALXY_CURRENT_YEAR = date.today().year
 
 # Author
-AUTHOR_INTRO = u'Hola, soy Francisco García Mezano. DataOps Manager en Nowports.'
+AUTHOR_INTRO = u'Soy Francisco G. Mezano, un visionario en el campo de los datos con una pasión por impulsar el valor empresarial a través de la innovación data-driven. Mi experiencia en data engineering, DataOps y data science me ha permitido liderar equipos y proyectos que transforman la manera en que las organizaciones aprovechan sus datos para la toma de decisiones estratégicas.   '
 AUTHOR_DESCRIPTION = u'Estadístico | Data Scientist | Data Analyst | Data Engineer | Data Team Lead | DataOps Manager'
 AUTHOR_AVATAR = 'https://mezano85.github.io/assets/img/profile-img.jpg'
 AUTHOR_WEB = 'https://mezano85.github.io/'
@@ -57,7 +57,7 @@ SOCIAL = (
 DISPLAY_CATEGORIES_ON_MENU = True
 
 # Menu
-#MENUITEMS = (
-#    ('Categories', f'{CATEGORIES_SAVE_AS}'),
-#    ('Archive', f'{ARCHIVES_SAVE_AS}'),
-#)
+MENUITEMS = (
+    ('Posts', f'{CATEGORIES_SAVE_AS}'),
+    #('Archive', f'{ARCHIVES_SAVE_AS}'),
+)

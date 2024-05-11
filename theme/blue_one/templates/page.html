@@ -1,8 +1,9 @@
     {% extends "base.html" %}
-
+    
     {% block title %}{{ page.title }} &ndash; {{ SITENAME }}{% endblock %}
-
+    
     {% block content %}
+    {% include 'introduction.html' %}
 
     <br><br><br>
 
@@ -26,7 +27,7 @@
         
         {% if page.modified %}
         <br>
-        <p>Last updated: {{ page.locale_modified }}</p>
+        <p><strong>{{ page.locale_modified }}</strong> </p>
         {% endif %}
 
         <br><br><br>
