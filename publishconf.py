@@ -27,20 +27,20 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = 'theme/blue_one'
+THEME = 'theme/mezano'
 
 
 # Theme customizations
 #MINIMALXY_CUSTOM_CSS = 'static/custom.css'
 MINIMALXY_FAVICON = 'favicon.ico'
-MINIMALXY_START_YEAR = 2022
+MINIMALXY_START_YEAR = 2023
 MINIMALXY_CURRENT_YEAR = date.today().year
 
 # Author
 AUTHOR_INTRO = u'Soy Francisco G. Mezano, un visionario en el campo de los datos con una pasión por impulsar el valor empresarial a través de la innovación data-driven. Mi experiencia en data engineering, DataOps y data science me ha permitido liderar equipos y proyectos que transforman la manera en que las organizaciones aprovechan sus datos para la toma de decisiones estratégicas.   '
 AUTHOR_DESCRIPTION = u'Estadístico | Data Scientist | Data Analyst | Data Engineer | Data Team Lead | DataOps Manager'
-AUTHOR_AVATAR = 'https://mezano85.github.io/assets/img/profile-img.jpg'
-AUTHOR_WEB = 'https://mezano85.github.io/'
+AUTHOR_AVATAR = 'https://elhogardelbuho.com/assets/img/profile-img.jpg'
+AUTHOR_WEB = 'https://elhogardelbuho.com/'
 
 # Services
 GOOGLE_TAG = 'G-KHB57NQZEG'
@@ -54,7 +54,7 @@ SOCIAL = (
     ('linkedin', 'http://www.linkedin.com/in/mezano'),
 )
 
-DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = False
 
 # Menu
 MENUITEMS = (
