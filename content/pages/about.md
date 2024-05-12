@@ -6,8 +6,8 @@ Authors: Francisco G. Mezano
 Summary: Acerca de este blog
 
 
-Hola, soy Francisco García Mezano. Soy un apasionado de los procesos de datos y he creado este blog 
-para compartir mis conocimientos y experiencias. En este blog desarrollaré artículos sobre temas como 
+He creado este blog 
+para compartir mis conocimientos y experiencias. Desarrollaré artículos sobre temas como 
 análisis, visualización, limpieza y transformación de datos, entre otros. 
 
 Para crear este blog, utilizo la herramienta [Pelican](https://docs.getpelican.com/), que me permite 
